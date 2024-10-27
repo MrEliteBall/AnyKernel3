@@ -13,22 +13,15 @@ supported.versions=14.0
 supported.patchlevels=
 '; }
 
-# shell variables
 block=/dev/block/bootdevice/by-name/boot;
 is_slot_device=1;
 ramdisk_compression=auto;
 patch_vbmeta_flag=auto;
 
-## AnyKernel methods (DO NOT CHANGE)
-# import patching functions/variables - see for reference
 . tools/ak3-core.sh;
 
-## AnyKernel file attributes
-# set permissions/ownership for included ramdisk files
 set_perm_recursive 0 0 755 644 $ramdisk/*;
 set_perm_recursive 0 0 750 750 $ramdisk/init* $ramdisk/sbin;
 
-## AnyKernel boot install
 split_boot;
-
 flash_boot;
