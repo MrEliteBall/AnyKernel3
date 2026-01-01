@@ -2,14 +2,14 @@
 # osm0sis @ xda-developers
 
 properties() { '
-kernel.string=MoeKernel by @whyakari
+kernel.string=SushiKernel by @whyakari
 do.devicecheck=1
 do.modules=1
 do.systemless=0
 do.cleanup=1
 do.cleanuponabort=0
 device.name1=fogos
-supported.versions=14.0-16.0
+supported.versions=15.0-16.1
 supported.patchlevels=
 '; }
 
