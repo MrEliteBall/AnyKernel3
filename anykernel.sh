@@ -1,22 +1,24 @@
-# AnyKernel3 Script - SushiKernel.
+### AnyKernel3 Ramdisk Mod Script
+
 properties() { '
-kernel.string=SushiKernel by @jenniemylovekawaii
+kernel.string=SushiKernel by @whyakari
 do.devicecheck=1
-do.modules=0
+do.modules=1
 do.systemless=0
 do.cleanup=1
 do.cleanuponabort=0
 device.name1=bangkk
-device.name2=
-supported.versions=15-16.1
+supported.versions=15.0-16.0
+supported.patchlevels=
+supported.vendorpatchlevels=
 '; }
 
-block=/dev/block/bootdevice/by-name/boot;
-is_slot_device=1;
-ramdisk_compression=auto;
-patch_vbmeta_flag=auto;
+BLOCK=/dev/block/bootdevice/by-name/boot;
+IS_SLOT_DEVICE=1;
+RAMDISK_COMPRESSION=auto;
+PATCH_VBMETA_FLAG=auto;
 
 . tools/ak3-core.sh;
 
 dump_boot;
-write_boot;
+flash_boot;
