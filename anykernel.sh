@@ -8,7 +8,7 @@ do.systemless=0
 do.cleanup=1
 do.cleanuponabort=0
 device.name1=bangkk
-supported.versions=15.0-17.0
+supported.versions=15-17
 supported.patchlevels=
 supported.vendorpatchlevels=
 '; }
