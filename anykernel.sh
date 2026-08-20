@@ -36,5 +36,5 @@ dump_boot;
 write_boot;
 
 ui_print "[+] Kernel successfully flashed!";
-ui_print "[+] Thank you for using MeowKernel!";
+ui_print "[+] Thank you for using SushiKernel!";
 ## end boot install
