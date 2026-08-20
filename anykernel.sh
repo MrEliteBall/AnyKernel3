@@ -20,5 +20,21 @@ PATCH_VBMETA_FLAG=auto;
 
 . tools/ak3-core.sh;
 
+## AnyKernel boot install
+ui_print "[#] Installing Kernel, dtb and dtbo...";
 dump_boot;
-flash_boot;
+write_boot;
+
+# The generated DTB and recovery ramdisk compatibility overlay live in
+# vendor_boot on lisa, so switch partitions and repack that image after
+# boot/dtbo are done.
+BLOCK=vendor_boot;
+reset_ak;
+
+ui_print "[#] Installing dtb and recovery ramdisk compatibility...";
+dump_boot;
+write_boot;
+
+ui_print "[+] Kernel successfully flashed!";
+ui_print "[+] Thank you for using MeowKernel!";
+## end boot install
