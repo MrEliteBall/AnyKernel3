@@ -35,6 +35,6 @@ ui_print "[#] Installing dtb and recovery ramdisk compatibility...";
 dump_boot;
 write_boot;
 
-ui_print "[+] Kernel successfully flashed!";
-ui_print "[+] Thank you for using SushiKernel!";
+ui_print "[+] Flash successful!";
+ui_print "[+] Enjoy Sashimi Kernel!";
 ## end boot install
